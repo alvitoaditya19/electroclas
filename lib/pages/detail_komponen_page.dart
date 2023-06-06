@@ -1,8 +1,10 @@
+import 'package:electroclas/models/komponen_model.dart';
 import 'package:electroclas/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class DetailKomponenPage extends StatefulWidget {
-  const DetailKomponenPage({Key? key}) : super(key: key);
+  final KomponenModel? komponenModel;
+  const DetailKomponenPage({Key? key, this.komponenModel}) : super(key: key);
 
   @override
   State<DetailKomponenPage> createState() => _DetailKomponenPageState();
@@ -12,27 +14,87 @@ class _DetailKomponenPageState extends State<DetailKomponenPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+         appBar: AppBar(
         backgroundColor: kWhiteColor,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Text(
-                "Resistor",
-                style: greenTextStyle.copyWith(
-                    fontSize: 20, fontWeight: FontWeight.w600),
-              ),
-              SizedBox(height: 10,),
-              Container(
-                height: 150,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage('assets/img-komp.png'),
+          leading: GestureDetector(
+          child: Icon( Icons.arrow_back_ios, color: kBlackColor,  ),
+          onTap: () {
+            Navigator.pop(context);
+          } ,
+        ) ,
+      ),
+        backgroundColor: kGreenColor2,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(left: 24, top: 10, bottom: 10),
+                  
+                  width: double.infinity,
+                  decoration: BoxDecoration(color: kWhiteColor),
+                  child: Text(
+                    widget.komponenModel!.name!,
+                    style: blackTextStyle.copyWith(
+                        fontSize: 20),
                   ),
                 ),
-              ),
-            ],
+        
+                Container(
+                  height: 150,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: kWhiteColor,
+                  ),
+                  child: Container(
+                    decoration:  BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(widget.komponenModel!.imgUrl!),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 20,
+                  width: double.infinity,
+               
+                  decoration: BoxDecoration(color: kWhiteColor),),
+                Container(
+                  height: 20,
+                  width: double.infinity,
+               
+                  decoration: BoxDecoration(color: kWhiteColor),
+                  child: Container(
+                    height: 20,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: kGreenColor2,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16),
+                          topRight: Radius.circular(16),
+                        )),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: kGreenColor2,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        "Resistor adalah komponen elektronika yang bersifat menghambat arus listrik. Resistor termasuk dalam komponen pasif karena komponen ini tidak membutuhkan arus listrik untuk bekerja.",
+                        style: blackTextStyle.copyWith(
+                            fontSize: 16, fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ));
   }

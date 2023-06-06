@@ -1,9 +1,12 @@
+import 'package:electroclas/models/komponen_model.dart';
 import 'package:electroclas/shared/theme.dart';
 import 'package:electroclas/widgets/komponen.dart';
 import 'package:flutter/material.dart';
 
 class KomponenPage extends StatefulWidget {
-  const KomponenPage({Key? key}) : super(key: key);
+  final KomponenModel? komponenModel;
+
+  const KomponenPage({Key? key, this.komponenModel}) : super(key: key);
 
   @override
   State<KomponenPage> createState() => _KomponenPageState();
@@ -98,18 +101,36 @@ class _KomponenPageState extends State<KomponenPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Komponen(
-                              title: 'Resistor', imgUrl: 'assets/img-kom1.png'),
-                          const Komponen(
-                              title: 'Kapasitor',
-                              imgUrl: 'assets/img-kom2.png'),
-                          const Komponen(
-                              title: 'Induktor', imgUrl: 'assets/img-kom3.png'),
-                          const Komponen(
-                              title: 'Dioda', imgUrl: 'assets/img-kom4.png'),
-                          const Komponen(
-                              title: 'Transistor',
-                              imgUrl: 'assets/img-kom5.png'),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Resistor',
+                              imgUrl: 'assets/img-kom1.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Kapasitor',
+                              imgUrl: 'assets/img-kom2.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Induktor',
+                              imgUrl: 'assets/img-kom3.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Dioda',
+                              imgUrl: 'assets/img-kom4.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Transistor',
+                              imgUrl: 'assets/img-kom5.png',
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(
@@ -118,18 +139,36 @@ class _KomponenPageState extends State<KomponenPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Komponen(
-                              title: 'Ic', imgUrl: 'assets/img-kom6.png'),
-                          const Komponen(
-                              title: 'Saklar',
-                              imgUrl: 'assets/img-kom7.png'),
-                          const Komponen(
-                              title: 'Potensiometer', imgUrl: 'assets/img-kom8.png'),
-                          const Komponen(
-                              title: 'LED', imgUrl: 'assets/img-kom9.png'),
-                          const Komponen(
-                              title: 'Buzzer',
-                              imgUrl: 'assets/img-kom10.png'),
+                                            Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Ic',
+                              imgUrl: 'assets/img-kom6.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Saklar',
+                              imgUrl: 'assets/img-kom7.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Potensiometer',
+                              imgUrl: 'assets/img-kom8.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'LED',
+                              imgUrl: 'assets/img-kom9.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Buzzer',
+                              imgUrl: 'assets/img-kom10.png',
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(
@@ -138,18 +177,36 @@ class _KomponenPageState extends State<KomponenPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Komponen(
-                              title: 'sensor LM35', imgUrl: 'assets/img-kom11.png'),
-                          const Komponen(
-                              title: 'Relay',
-                              imgUrl: 'assets/img-kom12.png'),
-                          const Komponen(
-                              title: 'sensor IR', imgUrl: 'assets/img-kom13.png'),
-                          const Komponen(
-                              title: 'LDR', imgUrl: 'assets/img-kom14.png'),
-                          const Komponen(
-                              title: 'sensor UL',
-                              imgUrl: 'assets/img-kom15.png'),
+                Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'sensor LM35',
+                              imgUrl: 'assets/img-kom11.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Relay',
+                              imgUrl: 'assets/img-kom12.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'sensor IR',
+                              imgUrl: 'assets/img-kom13.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'LDR',
+                              imgUrl: 'assets/img-kom14.png',
+                            ),
+                          ),
+                          Komponen(
+                            komponenModel: KomponenModel(
+                              name: 'Sensor UL',
+                              imgUrl: 'assets/img-kom15.png',
+                            ),
+                          ),
                         ],
                       ),
                     ],
