@@ -19,28 +19,35 @@ class Komponen extends StatelessWidget {
           ),
         );
       },
-      child: Column(
-        children: [
-          Container(
-            height: 36,
-            width: 36,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(komponenModel!.imgUrl!),
+      child: SizedBox(
+              width: 50,
+
+        child: Column(
+          children: [
+            Container(
+              height: 36,
+              width: 36,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(komponenModel!.imgUrl!),
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 4,
-          ),
-          Text(
-            komponenModel!.name!,
-            style: blackTextStyle.copyWith(
-              fontSize: 12,
+            SizedBox(
+              height: 4,
             ),
-          ),
-        ],
+            Center(
+              child: Text(
+                komponenModel!.name!,
+                style: blackTextStyle.copyWith(
+                  fontSize: 12,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

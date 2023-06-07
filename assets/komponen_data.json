@@ -1,0 +1,78 @@
+[
+    {
+        "name": "Resistor",
+        "imgUrl": "assets/img-kom1.png",
+        "desc":"Resistor adalah komponen elektronik pasif yang dapat menghambat arus listrik (Resistansi) dalam rangkaian elektronik. Resistansi diukur dalam satuan ohm Resistor (Ω). Fungsi lain resistor antara lain sebagai pembagi tegangan, penyaringan dan filter, dan lainnya."
+    },
+    {
+        "name": "Kapasitor",
+        "imgUrl": "assets/img-kom2.png",
+        "desc":"Kapasitor adalah komponen pasif dalam rangkaian elektronik yang berfungsi untuk menyimpan dan melepaskan energi listrik dalam bentuk medan elektrostatis. Kemampuan ini disebut dengan kapasitansi dengan satuan unit Farad (F)."
+    },
+    {
+        "name": "Induktor",
+        "imgUrl": "assets/img-kom3.png",
+        "desc":"Induktor atau disebut juga coil adalah komponen elektronika pasif yang berbentuk kumparan dari susunan lilitan kawat. Induktor memiliki kemampuan untuk menyimpan energi magnet. Kemampuan ini disebut dengan induktansi yang satuan unitnya adalah Henry (H)."
+    },
+    {
+        "name": "LDR",
+        "imgUrl": "assets/img-kom4.png",
+        "desc":"Light Dependent Resistor (LDR) adalah jenis Resistor yang nilai hambatan atau nilai resistansinya tergantung pada intensitas cahaya yang diterimanya. Fungsi LDR adalah untuk menghantarkan arus listrik jika menerima sejumlah intensitas cahaya/terang dan menghambat arus listrik dalam kondisi gelap."
+    },
+    {
+        "name": "LED",
+        "imgUrl": "assets/img-kom5.png",
+        "desc":"Light Emitting Diode (LED) Adalah salah satu dari banyak jenis perangkat semikonduktor yang mengeluarkan cahaya ketika arus listrik melewatinya. Fungsi LED antara lain sebagai indikator visual, pencahayaan dan lain – lain."
+    },
+    {
+        "name": "Buzzer",
+        "imgUrl": "assets/img-kom6.png",
+        "desc":"Buzzer Elektronika adalah sebuah komponen elektronika yang dapat menghasilkan getaran suara berupa gelombang bunyi. Buzzer elektronika akan menghasilkan getaran suara ketika diberikan sejumlah tegangan listrik."
+    },
+    {
+        "name": "IC",
+        "imgUrl": "assets/img-kom7.png",
+        "desc":"Integrated Circuit (IC)/Chip adalah Komponen Elektronika Aktif yang terdiri dari gabungan ratusan, ribuan bahkan jutaan transistor, dioda, resistor dan kapasitor yang diintegrasikan menjadi suatu Rangkaian Elektronika dalam sebuah kemasan kecil. Fungsi IC antara lain untuk penguat sinyal, logika digital, memori dan lainnya."
+    },
+    {
+        "name": "Relay",
+        "imgUrl": "assets/img-kom8.png",
+        "desc":"Relay adalah sebuah komponen elektromekanik yang berfungsi sebagai saklar elektronik yang dikendalikan oleh sinyal listrik. Fungsi utama relay adalah mengontrol arus listrik dengan menggunakan sinyal listrik yang lebih kecil."
+    },
+    {
+        "name": "Dioda",
+        "imgUrl": "assets/img-kom9.png",
+        "desc":"Dioda adalah salah satu komponen elektronik dasar yang memiliki dua terminal yaitu anoda (terminal positif) dan katoda (terminal negatif). Fungsi utama dioda adalah memungkinkan aliran arus listrik hanya dalam satu arah dan menghambat aliran arus dalam arah sebaliknya."
+    },
+    {
+        "name": "Potensiometer",
+        "imgUrl": "assets/img-kom10.png",
+        "desc":"Potensiometer adalah komponen elektronik yang digunakan untuk mengatur atau mengendalikan resistansi (hambatan) dalam suatu rangkaian. Fungsi utama potensiometer adalah mengubah atau memvariasikan tegangan, arus, atau level sinyal dalam suatu rangkaian elektronik."
+    },
+    {
+        "name": "Transistor",
+        "imgUrl": "assets/img-kom11.png",
+        "desc":"Transistor adalah komponen elektronik aktif yang memiliki kemampuan untuk mengontrol dan menguatkan sinyal listrik. Transistor terdiri dari tiga lapisan semikonduktoryaitu emitter (emitor), base (basis), dan collector (kolektor), yang dapat berfungsi sebagai saklar elektronik atau penguat sinyal."
+    },
+    {
+        "name": "Saklar",
+        "imgUrl": "assets/img-kom12.png",
+        "desc":"Saklar adalah suatu komponen atau perangkat yang digunakan untuk menghubungkan atau memutuskan aliran listrik dalam suatu rangkaian. Fungsi utama saklar adalah mengontrol aliran arus listrik dengan membuka atau menutup sirkuit."
+    },
+    {
+        "name": "Sensor IR",
+        "imgUrl": "assets/img-kom13.png",
+        "desc":"Sensor IR (Infrared) adalah komponen elektronik yang digunakan untuk mendeteksi atau mengukur radiasi inframerah dalam suatu lingkungan. Sensor ini menggunakan sinar inframerah yang tidak terlihat oleh mata manusia, tetapi dapat dideteksi oleh sensor IR."
+    },
+    {
+        "name": "Sensor LM35",
+        "imgUrl": "assets/img-kom14.png",
+        "desc":"Sensor LM35 adalah sebuah sensor suhu analog yang populer dan sering digunakan dalam berbagai aplikasi yang membutuhkan pemantauan suhu. Sensor ini menghasilkan keluaran tegangan yang linier sesuai dengan suhu yang diukur."
+    },
+    {
+        "name": "Sensor Ultrasonik",
+        "imgUrl": "assets/img-kom15.png",
+        "desc":"Sensor ultrasonik adalah sebuah sensor yang menggunakan gelombang ultrasonik untuk mendeteksi jarak dan mendapatkan informasi tentang objek di sekitarnya. Sensor ini bekerja berdasarkan prinsip pantulan gelombang suara ultrasonik dari objek yang terdeteksi."
+    }
+
+]

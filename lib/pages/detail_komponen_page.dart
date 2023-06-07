@@ -86,7 +86,7 @@ class _DetailKomponenPageState extends State<DetailKomponenPage> {
                   child: Column(
                     children: [
                       Text(
-                        "Resistor adalah komponen elektronika yang bersifat menghambat arus listrik. Resistor termasuk dalam komponen pasif karena komponen ini tidak membutuhkan arus listrik untuk bekerja.",
+                         widget.komponenModel!.desc!,
                         style: blackTextStyle.copyWith(
                             fontSize: 16, fontWeight: FontWeight.w500),
                       ),
