@@ -29,7 +29,7 @@ class _DetailKomponenPageState extends State<DetailKomponenPage> {
             child: Column(
               children: [
                 Container(
-                  padding: EdgeInsets.only(left: 24, top: 10, bottom: 10),
+                  padding: const EdgeInsets.only(left: 24, top: 10, bottom: 10),
                   
                   width: double.infinity,
                   decoration: BoxDecoration(color: kWhiteColor),
@@ -70,14 +70,14 @@ class _DetailKomponenPageState extends State<DetailKomponenPage> {
                     width: double.infinity,
                     decoration: BoxDecoration(
                         color: kGreenColor2,
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(16),
                           topRight: Radius.circular(16),
                         )),
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: kGreenColor2,

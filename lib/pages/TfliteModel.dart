@@ -60,7 +60,7 @@ class _TfliteModelState extends State<TfliteModel> {
               Container(
                 height: 400,
                 width: 400,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage(
@@ -73,7 +73,7 @@ class _TfliteModelState extends State<TfliteModel> {
             child: ListView(
               children: [
                 Container(
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                         left: defaultMargin,
                         right: defaultMargin,
                         top: 30,
@@ -88,7 +88,7 @@ class _TfliteModelState extends State<TfliteModel> {
                       Container(
                         height: 70,
                         width: 70,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage(
                           'assets/img-profil.png',
@@ -96,7 +96,7 @@ class _TfliteModelState extends State<TfliteModel> {
                       ),
                     ])),
                 Container(
-                  margin: EdgeInsets.only(left: 24),
+                  margin: const EdgeInsets.only(left: 24),
                   child: Text(
                     'Jenis komponen apakah ini?',
                     style: blackTextStyle.copyWith(
@@ -106,11 +106,11 @@ class _TfliteModelState extends State<TfliteModel> {
                 ),
                 (imageSelect)
                     ? Container(
-                        margin: EdgeInsets.only(
+                        margin: const EdgeInsets.only(
                             left: defaultMargin,
                             right: defaultMargin,
                             bottom: 30),
-                        padding: EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
                             color: kWhiteColor,
                             borderRadius: BorderRadius.circular(18)),
@@ -119,7 +119,7 @@ class _TfliteModelState extends State<TfliteModel> {
                           child: Image.file(_image),
                         ))
                     : Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         child: Opacity(
                           opacity: 0.8,
                           child: Center(
@@ -138,7 +138,7 @@ class _TfliteModelState extends State<TfliteModel> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                            margin: EdgeInsets.only(left: defaultMargin),
+                            margin: const EdgeInsets.only(left: defaultMargin),
                             child: Text(
                               'Hasil Klasifikasi Komponen',
                               style: blackTextStyle.copyWith(
@@ -159,7 +159,7 @@ class _TfliteModelState extends State<TfliteModel> {
                               Container(
                                 height: 16,
                                 width: 16,
-                                margin: EdgeInsets.only(
+                                margin: const EdgeInsets.only(
                                     left: 10, right: defaultMargin),
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
@@ -169,26 +169,26 @@ class _TfliteModelState extends State<TfliteModel> {
                           )
                         ],
                       )
-                    : SizedBox(),
+                    : const SizedBox(),
                 SingleChildScrollView(
                   child: Column(
                     children: (imageSelect)
                         ? _results.map((result) {
                             return Container(
                               width: double.infinity,
-                              margin: EdgeInsets.only(
+                              margin: const EdgeInsets.only(
                                 left: defaultMargin,
                                 right: defaultMargin,
                                 top: 12,
                               ),
-                              padding: EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                   color: kGreenColor2,
                                   borderRadius: BorderRadius.circular(18)),
                               child: Row(
                                 children: [
-                                  ImageVege("assets/img-clas.png"),
-                                  SizedBox(
+                                  const ImageVege("assets/img-clas.png"),
+                                  const SizedBox(
                                     width: 16,
                                   ),
                                   Expanded(
@@ -212,11 +212,11 @@ class _TfliteModelState extends State<TfliteModel> {
                                         height: 24,
                                         width: 24,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 4,
                                       ),
                                       Container(
-                                        margin: EdgeInsets.only(top: 3),
+                                        margin: const EdgeInsets.only(top: 3),
                                         child: Text(
                                             "${(result['confidence'] * 100).toStringAsFixed(2)} %",
                                             style: blackTextStyle.copyWith(
@@ -253,7 +253,7 @@ class _TfliteModelState extends State<TfliteModel> {
               ),
             ),
           ),
-          SizedBox(width: 14),
+          const SizedBox(width: 14),
           Container(
             height: 70.0,
             width: 70.0,

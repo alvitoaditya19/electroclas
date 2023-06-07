@@ -23,7 +23,6 @@ class _KomponenPageState extends State<KomponenPage> {
   }
 
   Future<void> loadJsonData() async {
-    // Mengganti 'data.json' dengan path/file JSON Anda
     String jsonString = await DefaultAssetBundle.of(context)
         .loadString('assets/komponen_data.json');
     final jsonData = json.decode(jsonString);
@@ -78,35 +77,40 @@ class _KomponenPageState extends State<KomponenPage> {
                     ],
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  margin:
-                      const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-                  decoration: BoxDecoration(
-                    color: kWhiteColor,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/img-barcode.png'),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/tflite-model');
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: 24, vertical: 20),
+                    decoration: BoxDecoration(
+                      color: kWhiteColor,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/img-barcode.png'),
+                            ),
                           ),
                         ),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "Klasifikasi",
-                        style: blackTextStyle.copyWith(
-                            fontSize: 14, fontWeight: FontWeight.w500),
-                      ),
-                    ],
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "Klasifikasi",
+                          style: blackTextStyle.copyWith(
+                              fontSize: 14, fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Container(
@@ -140,7 +144,7 @@ class _KomponenPageState extends State<KomponenPage> {
                         ],
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -153,7 +157,7 @@ class _KomponenPageState extends State<KomponenPage> {
                         ],
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -168,11 +172,11 @@ class _KomponenPageState extends State<KomponenPage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Container(
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(color: kWhiteColor),
                   child: Column(
                     children: [
@@ -182,7 +186,7 @@ class _KomponenPageState extends State<KomponenPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       )
                     ],

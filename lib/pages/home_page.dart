@@ -1,7 +1,5 @@
 import 'package:electroclas/shared/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({key});
@@ -44,10 +42,10 @@ class _HomePageState extends State<HomePage> {
           SafeArea(
             child: SingleChildScrollView(
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 24),
+                margin: const EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text(
@@ -66,17 +64,17 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.symmetric(vertical: 20),
+                      padding: const EdgeInsets.symmetric(vertical: 20),
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                                color: Color.fromARGB(255, 0, 0, 0)
+                                color: const Color.fromARGB(255, 0, 0, 0)
                                     .withOpacity(.3),
-                                offset: Offset(0, 0),
+                                offset: const Offset(0, 0),
                                 blurRadius: 20,
                                 spreadRadius: 4)
                           ],
@@ -93,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                     GestureDetector(
@@ -102,15 +100,15 @@ class _HomePageState extends State<HomePage> {
 
                     },
                       child: Container(
-                        padding: EdgeInsets.all(14),
+                        padding: const EdgeInsets.all(14),
                         decoration: BoxDecoration(
                           color: kGreenColor,
                           borderRadius: BorderRadius.circular(16),
                           boxShadow: [
                             BoxShadow(
-                                color: Color.fromARGB(255, 0, 0, 0)
+                                color: const Color.fromARGB(255, 0, 0, 0)
                                     .withOpacity(.1),
-                                offset: Offset(0, 0),
+                                offset: const Offset(0, 0),
                                 blurRadius: 20,
                                 spreadRadius: 2)
                           ],
@@ -127,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 24,
                             ),
                             Text(
@@ -144,16 +142,16 @@ class _HomePageState extends State<HomePage> {
 
                     },
                       child: Container(
-                        padding: EdgeInsets.all(14),
-                        margin: EdgeInsets.symmetric(vertical: 20),
+                        padding: const EdgeInsets.all(14),
+                        margin: const EdgeInsets.symmetric(vertical: 20),
                         decoration: BoxDecoration(
                           color: kGreenColor,
                           borderRadius: BorderRadius.circular(16),
                           boxShadow: [
                             BoxShadow(
-                                color: Color.fromARGB(255, 0, 0, 0)
+                                color: const Color.fromARGB(255, 0, 0, 0)
                                     .withOpacity(.1),
-                                offset: Offset(0, 0),
+                                offset: const Offset(0, 0),
                                 blurRadius: 20,
                                 spreadRadius: 2)
                           ],
@@ -170,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 24,
                             ),
                             Text(
@@ -184,15 +182,15 @@ class _HomePageState extends State<HomePage> {
                     GestureDetector(
                       onTap: () {},
                       child: Container(
-                        padding: EdgeInsets.all(14),
+                        padding: const EdgeInsets.all(14),
                         decoration: BoxDecoration(
                           color: kGreenColor,
                           borderRadius: BorderRadius.circular(16),
                           boxShadow: [
                             BoxShadow(
-                                color: Color.fromARGB(255, 0, 0, 0)
+                                color: const Color.fromARGB(255, 0, 0, 0)
                                     .withOpacity(.1),
-                                offset: Offset(0, 0),
+                                offset: const Offset(0, 0),
                                 blurRadius: 20,
                                 spreadRadius: 2)
                           ],
@@ -209,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 24,
                             ),
                             Text(

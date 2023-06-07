@@ -15,18 +15,19 @@ class Komponen extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => DetailKomponenPage(komponenModel: komponenModel,),
+            builder: (context) => DetailKomponenPage(
+              komponenModel: komponenModel,
+            ),
           ),
         );
       },
       child: SizedBox(
-              width: 50,
-
+        width: 60,
         child: Column(
           children: [
             Container(
-              height: 36,
-              width: 36,
+              height: 44,
+              width: 44,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,

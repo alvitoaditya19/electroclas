@@ -16,9 +16,9 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    timer = Timer(Duration(seconds: 3),
+    timer = Timer(const Duration(seconds: 3),
         () => Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomePage())));
+            context, MaterialPageRoute(builder: (context) => const HomePage())));
   }
 
   @override
@@ -32,8 +32,7 @@ class _SplashPageState extends State<SplashPage> {
             Container(
               height: 160,
               width: 160,
-          
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/ic-app.png'),
                 ),
