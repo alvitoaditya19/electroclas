@@ -33,6 +33,8 @@ class _KomponenPageState extends State<KomponenPage> {
         name: item['name'],
         imgUrl: item['imgUrl'],
         desc: item['desc'],
+        imgBan: item['imgBan'],
+
       );
       myModels.add(myModel);
     }

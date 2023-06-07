@@ -50,7 +50,7 @@ class _DetailKomponenPageState extends State<DetailKomponenPage> {
                     decoration:  BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage(widget.komponenModel!.imgUrl!),
+                        image: AssetImage(widget.komponenModel!.imgBan!),
                       ),
                     ),
                   ),
