@@ -5,6 +5,8 @@ const double defaultMargin = 24;
 const double defaultRadius = 17.0;
 
 Color kBackgroundColor = Color(0xFFFAFAFA);
+Color kBackgroundColor2 = Color(0xFFF5F5F5);
+
 
 
 Color kBlackColor = Color(0xFF1F1449);

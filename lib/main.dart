@@ -1,4 +1,5 @@
 import 'package:electroclas/pages/TfliteModel.dart';
+import 'package:electroclas/pages/about_app_page.dart';
 import 'package:electroclas/pages/home_page.dart';
 import 'package:electroclas/pages/komponen_page.dart';
 import 'package:electroclas/pages/splash_page.dart';
@@ -22,6 +23,8 @@ class MyApp extends StatelessWidget {
           '/home-page': (context) => const HomePage(),
           '/komponen-page': (context) =>  const KomponenPage(),
           '/tflite-model': (context) =>  TfliteModel(),
+          '/about': (context) => const AboutAppPage(),
+
 
         },
     );

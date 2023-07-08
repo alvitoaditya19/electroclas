@@ -1,0 +1,15 @@
+Buzzer
+Capasitor
+Diode
+IC
+Induktor
+LDR
+LED
+Potensiometer
+Relay
+Resistor
+Saklar
+Sensor IR
+Sensor LM35
+Sensor Ultrasonik
+Transistor

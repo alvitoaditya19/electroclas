@@ -21,17 +21,35 @@ class Komponen extends StatelessWidget {
           ),
         );
       },
-      child: SizedBox(
+      child: Container(
         width: 60,
         child: Column(
           children: [
             Container(
-              height: 44,
-              width: 44,
+              height: 50,
+              width: 50,
               decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(komponenModel!.imgUrl!),
+                color: kBackgroundColor2,
+                boxShadow: [
+                  BoxShadow(
+                      color:
+                          const Color.fromARGB(255, 0, 0, 0).withOpacity(.25),
+                      offset: const Offset(0, 4),
+                      blurRadius: 4,
+                      spreadRadius: 0)
+                ],
+                borderRadius: BorderRadius.circular(2000),
+              ),
+              child: Padding(
+                padding:
+                    EdgeInsets.all(8), // Adjust the padding value as needed
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(komponenModel!.imgUrl!),
+                    ),
+                  ),
                 ),
               ),
             ),

@@ -58,8 +58,8 @@ class _TfliteModelState extends State<TfliteModel> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                height: 400,
-                width: 400,
+                height: 300,
+                width: 300,
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.cover,
@@ -72,29 +72,7 @@ class _TfliteModelState extends State<TfliteModel> {
           SafeArea(
             child: ListView(
               children: [
-                Container(
-                    margin: const EdgeInsets.only(
-                        left: defaultMargin,
-                        right: defaultMargin,
-                        top: 30,
-                        bottom: 14),
-                    child: Row(children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [],
-                        ),
-                      ),
-                      Container(
-                        height: 70,
-                        width: 70,
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                          'assets/img-profil.png',
-                        ))),
-                      ),
-                    ])),
+                SizedBox(height: 20,),
                 Container(
                   margin: const EdgeInsets.only(left: 24),
                   child: Text(
@@ -244,11 +222,12 @@ class _TfliteModelState extends State<TfliteModel> {
             height: 70.0,
             width: 70.0,
             child: FloatingActionButton(
+              backgroundColor: kWhiteColor,
               heroTag: null,
               onPressed: pickCameraImage,
               tooltip: "Pick Camera Image",
               child: Image.asset(
-                "assets/images/img-camera.png",
+                "assets/img-camera.png",
                 height: 42,
               ),
             ),
@@ -258,11 +237,13 @@ class _TfliteModelState extends State<TfliteModel> {
             height: 70.0,
             width: 70.0,
             child: FloatingActionButton(
+              backgroundColor: kWhiteColor,
+
               onPressed: pickImage,
               heroTag: null,
               tooltip: "Pick Image",
               child: Image.asset(
-                "assets/images/ic-add.png",
+                "assets/ic-add.png",
                 height: 42,
               ),
             ),

@@ -34,7 +34,6 @@ class _KomponenPageState extends State<KomponenPage> {
         imgUrl: item['imgUrl'],
         desc: item['desc'],
         imgBan: item['imgBan'],
-
       );
       myModels.add(myModel);
     }
@@ -47,156 +46,178 @@ class _KomponenPageState extends State<KomponenPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: kGreenColor,
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+        backgroundColor: kWhiteColor,
+        body: Stack(
+          children: [
+            Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Spacer(),
+                  Container(
+                    height: 280,
+                    width: 280,
+                    margin: EdgeInsets.only(left: 10),
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/img-devices.png'),
+                      ),
+                    ),
+                  ),
+                  
+                ],
+              ),
+            ),
+            Column(
               children: [
-                const SizedBox(
-                  height: 16,
-                ),
                 Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 24),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Welcome, to the electronic\ncomponent classification\napplication",
-                        style: whiteTextStyle.copyWith(
-                          fontSize: 16,
-                        ),
-                      ),
-                      Container(
-                        height: 80,
-                        width: 80,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('assets/ic-app.png'),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, '/tflite-model');
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.all(10),
-                    margin: const EdgeInsets.symmetric(
-                        horizontal: 24, vertical: 20),
-                    decoration: BoxDecoration(
-                      color: kWhiteColor,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 40,
-                          width: 40,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage('assets/img-barcode.png'),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Klasifikasi",
-                          style: blackTextStyle.copyWith(
-                              fontSize: 14, fontWeight: FontWeight.w500),
-                        ),
-                      ],
+                  height: 210,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage('assets/bg-home1.png'),
                     ),
                   ),
                 ),
+                const Spacer(),
                 Container(
-                  margin: const EdgeInsets.only(left: 24),
-                  child: Text(
-                    "komponen elektronika",
-                    style: whiteTextStyle.copyWith(
-                      fontSize: 16,
+                  height: 70,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage('assets/bg-home2.png'),
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 12,
-                ),
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                      color: kWhiteColor,
-                      borderRadius: BorderRadius.circular(16)),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          for (int i = 0; i < 5; i++)
-                            if (i < processedData.length)
-                              Komponen(
-                                komponenModel: processedData[i],
-                              ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          for (int i = 5; i < 10; i++)
-                            if (i < processedData.length)
-                              Komponen(
-                                komponenModel: processedData[i],
-                              ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          for (int i = 10; i < 15; i++)
-                            if (i < processedData.length)
-                              Komponen(
-                                komponenModel: processedData[i],
-                              ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(color: kWhiteColor),
-                  child: Column(
-                    children: [
-                      Text(
-                        "Hallo, Saya Gita Destalia\nAplikasi ini digunakan sebagai tugas akhir kuliah\ndan bahan skripsi",
-                        style: blackTextStyle.copyWith(
-                          fontSize: 16,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 40,
-                      )
-                    ],
-                  ),
-                )
               ],
             ),
-          ),
+            SafeArea(
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 24),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Pengenalan Komponen\nElektronika",
+                            style: whiteTextStyle.copyWith(
+                              fontSize: 20,
+                            ),
+                          ),
+                          Container(
+                            height: 64,
+                            width: 64,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('assets/ic-app.png'),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 70,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      margin: const EdgeInsets.symmetric(horizontal: 20),
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                color: const Color.fromARGB(255, 0, 0, 0)
+                                    .withOpacity(.3),
+                                offset: const Offset(0, 0),
+                                blurRadius: 20,
+                                spreadRadius: 4)
+                          ],
+                          color: kWhiteColor,
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Komponen Elektronika",
+                            style: greenTextStyle.copyWith(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      margin: const EdgeInsets.symmetric(horizontal: 18),
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                color: const Color.fromARGB(255, 0, 0, 0)
+                                    .withOpacity(.2),
+                                offset: const Offset(0, 0),
+                                blurRadius: 8,
+                                spreadRadius: 4)
+                          ],
+                          color: kWhiteColor,
+                          borderRadius: BorderRadius.circular(16)),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              for (int i = 0; i < 5; i++)
+                                if (i < processedData.length)
+                                  Komponen(
+                                    komponenModel: processedData[i],
+                                  ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              for (int i = 5; i < 10; i++)
+                                if (i < processedData.length)
+                                  Komponen(
+                                    komponenModel: processedData[i],
+                                  ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              for (int i = 10; i < 15; i++)
+                                if (i < processedData.length)
+                                  Komponen(
+                                    komponenModel: processedData[i],
+                                  ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            
+          ],
         ));
   }
 }

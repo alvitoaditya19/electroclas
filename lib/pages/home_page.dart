@@ -1,23 +1,19 @@
 import 'package:electroclas/shared/theme.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({key});
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: kWhiteColor,
-        body: Stack(children: [
+      backgroundColor: kWhiteColor,
+      body: Stack(
+        children: [
           Column(
             children: [
               Container(
-                height: 300,
+                height: 210,
                 width: double.infinity,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
@@ -48,24 +44,28 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      "Welcome, to the electronic component classification application",
-                      style: whiteTextStyle.copyWith(
-                        fontSize: 20,
-                      ),
-                    ),
-                    Container(
-                      height: 150,
-                      width: double.infinity,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/img-komp.png'),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Selamat Datang\ndi Aplikasi Pengenalan\nKomponen Elektronika",
+                          style: whiteTextStyle.copyWith(
+                            fontSize: 20,
+                          ),
                         ),
-                      ),
+                        Container(
+                          height: 64,
+                          width: 64,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('assets/ic-app.png'),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 60,
                     ),
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 20),
@@ -95,10 +95,9 @@ class _HomePageState extends State<HomePage> {
                       height: 40,
                     ),
                     GestureDetector(
-                            onTap: () {
-                      Navigator.pushNamed(context, '/komponen-page');
-
-                    },
+                      onTap: () {
+                        Navigator.pushNamed(context, '/komponen-page');
+                      },
                       child: Container(
                         padding: const EdgeInsets.all(14),
                         decoration: BoxDecoration(
@@ -137,10 +136,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     GestureDetector(
-                           onTap: () {
-                      Navigator.pushNamed(context, '/tflite-model');
-
-                    },
+                      onTap: () {
+                        Navigator.pushNamed(context, '/tflite-model');
+                      },
                       child: Container(
                         padding: const EdgeInsets.all(14),
                         margin: const EdgeInsets.symmetric(vertical: 20),
@@ -180,7 +178,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                           onTap: () {
+                        Navigator.pushNamed(context, '/about');
+                      },
                       child: Container(
                         padding: const EdgeInsets.all(14),
                         decoration: BoxDecoration(
@@ -223,6 +223,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-        ]));
+        ],
+      ),
+    );
   }
 }
